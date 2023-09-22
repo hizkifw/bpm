@@ -48,4 +48,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: bpm-${{ matrix.target }}
-          path: target/${{ matrix.rust_target }}/release/*
+          path: target/${{ matrix.rust_target }}/release/bpm
