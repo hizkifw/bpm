@@ -37,10 +37,11 @@ jobs:
 
       # Build the Rust project
       - name: Build Rust project
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y musl-dev gcc-aarch64-linux-gnu
-          cargo build --release --target ${{ matrix.rust_target }}
+        uses: actions-rs/cargo@v1
+        with:
+          use-cross: true
+          command: build
+          args: --target ${{ matrix.rust_target }}
 
       # Upload the artifact
       - name: Upload Artifact
