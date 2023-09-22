@@ -41,7 +41,7 @@ jobs:
         with:
           use-cross: true
           command: build
-          args: --target ${{ matrix.rust_target }}
+          args: --target ${{ matrix.rust_target }} --release
 
       # Upload the artifact
       - name: Upload Artifact

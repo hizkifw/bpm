@@ -12,6 +12,3 @@ opt-level = 'z'
 lto = true
 codegen-units = 1
 strip = true
-
-[target.aarch64-unknown-linux-musl]
-linker = "aarch64-linux-musl-gcc"
